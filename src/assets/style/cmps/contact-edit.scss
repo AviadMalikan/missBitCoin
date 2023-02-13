@@ -1,9 +1,17 @@
 .car-edit {
     display: grid;
-    justify-items: start;
+    justify-items: center;
     gap: 5px;
     padding: 10px;
-    background-color: rgb(249, 197, 101);
+
+    .btns {
+        display: flex;
+    }
+
+    // border-radius: 3px;
+    h2 {
+        color: whitesmoke;
+    }
 
     button {
         justify-self: end;

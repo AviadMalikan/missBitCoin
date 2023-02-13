@@ -5,17 +5,5 @@
     gap: 10px;
     padding: 10px;
     background-color: darkgray;
-
-    input {
-        border-radius: 2rem;
-        padding: 7px;
-        border: 0 solid black;
-        outline: 0 solid black;
-        transition: all .5s;
-        
-        &:focus {
-            outline: 0 solid black;
-            padding: 7px 15px;
-        }
-    }
+    border-radius: 3px;
 }

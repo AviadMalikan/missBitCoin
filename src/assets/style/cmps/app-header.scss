@@ -2,10 +2,13 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    
+
     height: 5vh;
     padding-inline: 10px;
     background-color: sandybrown;
+    margin-bottom: 5px;
+    // border-radius: 3px;
+
 
     a {
         margin-inline-start: 1em;
