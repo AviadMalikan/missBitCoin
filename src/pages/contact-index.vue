@@ -3,7 +3,11 @@
     <UserMsg />
     <ContactFilter @filter="onSetFilterBy" />
     <RouterLink to="/contact/edit"><button>Add a Contact</button></RouterLink>
-    <ContactList @remove="removeContact" v-if="contacts" :contacts="filteredContacts" />
+    <ContactList
+      @remove="removeContact"
+      v-if="contacts"
+      :contacts="contactsToShow"
+    />
   </div>
 </template>
 
@@ -23,7 +27,8 @@ export default {
     };
   },
   async created() {
-    this.contacts = await contactService.query();
+    // this.contacts = await contactService.query();
+    this.contacts = this.$store.dispatch({ type: "loadContacts" });
   },
   methods: {
     async removeContact(contactId) {
@@ -32,15 +37,25 @@ export default {
         type: "success",
       };
       await contactService.remove(contactId);
-      this.contacts = this.contacts.filter((contact) => contact._id !== contactId);
+      this.contacts = this.contacts.filter(
+        (contact) => contact._id !== contactId
+      );
       eventBus.emit("user-msg", msg);
     },
     onSetFilterBy(filterBy) {
-      
       this.filterBy = filterBy;
+    },
+    setContacts() {
+      const contacts = this.$store.getters.contacts;
+      this.contacts = contacts;
     },
   },
   computed: {
+    contactsToShow() {
+      const bla = this.$store.getters.contacts;
+      this.contacts = bla;
+      return bla;
+    },
     filteredContacts() {
       const regex = new RegExp(this.filterBy.txt, "i");
       return this.contacts.filter((contact) => regex.test(contact.name));

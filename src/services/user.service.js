@@ -6,7 +6,7 @@ import { utilService } from './util.service.js'
 const KEY = 'users'
 
 export const userService = {
-    get,
+    // get,
     getUser,
 }
 
