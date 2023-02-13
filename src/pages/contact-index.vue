@@ -2,8 +2,8 @@
   <div class="main-container">
     <UserMsg />
     <ContactFilter @filter="onSetFilterBy" />
-    <ContactList @remove="removeContact" v-if="contacts" :contacts="filteredContacts" />
     <RouterLink to="/contact/edit"><button>Add a Contact</button></RouterLink>
+    <ContactList @remove="removeContact" v-if="contacts" :contacts="filteredContacts" />
   </div>
 </template>
 

@@ -1,4 +1,32 @@
+body {
+    text-align: center;
+    color: #202124;
+    background-color: #202124;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0;
+}
+
 ul {
     list-style-type: none;
     padding: 0;
+}
+
+img {
+    width: 100%;
+}
+
+button {
+    cursor: pointer;
+    margin: 0 5px;
+    padding: 7px 10px;
+    border-radius: 2rem;
+    background-color: darkgray;
+    border: 0 solid black;
 }

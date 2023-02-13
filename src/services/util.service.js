@@ -15,8 +15,10 @@ function makeId() {
 }
 function makePhoneNum() {
     var nums = '0123456789'
-    var str
-    for (var i = 0; i < 7; i++) {
+    var str = '(+972) '
+    for (var i = 0; i < 9; i++) {
+        if (i === 2) str += '-'
+        if (i === 5) str += '-'
         str += nums[Math.floor(Math.random() * nums.length)]
     }
     return str

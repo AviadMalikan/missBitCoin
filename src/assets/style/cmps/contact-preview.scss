@@ -1,0 +1,29 @@
+.contact-preview {
+    padding: 10px;
+    // background-color: rgb(211, 172, 121);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+
+    .contact-card {
+        position: relative;
+        margin-bottom: 20px;
+
+        .details {
+            position: absolute;
+            bottom: -5px;
+            width: 100%;
+            background-color: rgb(244 164 96);
+            border-radius: 2rem;
+            padding: 5px;
+        }
+    }
+}
+
+.contact-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 10px;
+    padding: 10px;
+    list-style-type: none;
+}
