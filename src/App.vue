@@ -14,11 +14,13 @@ export default {
     <main>
         <RouterView />
     </main>
-    <AppFooter />
+    <!-- <AppFooter /> -->
 </template>
 
 <style scoped>
 main {
+    max-width: 1280px;
+    margin: auto;
     min-height: calc(90vh - 4rem);
 }
 nav a.router-link-exact-active {

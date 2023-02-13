@@ -30,8 +30,12 @@
 .actions {
   position: absolute;
   display: flex;
-  bottom: 17px;
-  right: 15px;
-  flex-direction: column;
+  bottom: 7px;
+  right: 50%;
+  transform: translateX(50%);
+  // flex-direction: column;
 
+  button {
+    margin: 5px 1px;
+  }
 }

@@ -36,13 +36,14 @@ export default {
       eventBus.emit("user-msg", msg);
     },
     onSetFilterBy(filterBy) {
+      
       this.filterBy = filterBy;
     },
   },
   computed: {
     filteredContacts() {
       const regex = new RegExp(this.filterBy.txt, "i");
-      return this.contacts.filter((contact) => regex.test(contact.vendor));
+      return this.contacts.filter((contact) => regex.test(contact.name));
     },
   },
   components: {

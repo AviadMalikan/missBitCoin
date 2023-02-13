@@ -55,7 +55,7 @@ function _createContacts() {
 
 function _createContact(name) {
     return {
-        id: utilService.makeId(),
+        _id: utilService.makeId(),
         name,
         phone: utilService.makePhoneNum(),
         email: utilService.makeEmail(),

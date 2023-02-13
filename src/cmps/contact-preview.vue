@@ -6,8 +6,6 @@
     <section class="details">
       <h2>{{ contact.name }}</h2>
       <span>{{ contact.phone }}</span>
-      
-      <!-- <span>{{ contact.email }}</span> -->
     </section>
   </article>
 </template>

@@ -1,7 +1,7 @@
 <template>
     <div class="car-filter">
-        <p>Search</p>
-        <input @input="onFilter" v-model="filterBy.txt" type="text">
+        <!-- <p>Search</p> -->
+        <input @input="onFilter" placeholder="Search here" v-model="filterBy.txt" type="text">
     </div>
 </template>
 
