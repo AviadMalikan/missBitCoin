@@ -2,7 +2,7 @@
     <div v-if="car" class="car-details">
         <h2>{{car.vendor}}</h2>
         <h3>{{car.speed}}</h3>
-        <RouterLink to="/car">
+        <RouterLink to="/contact">
             <button>Back</button>
         </RouterLink>
     </div>

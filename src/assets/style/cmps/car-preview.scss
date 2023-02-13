@@ -1,4 +1,14 @@
-.car-preview {
+.contact-preview {
     padding: 10px;
     background-color: darkseagreen;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.contact-list {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: repeat(3, minmax(50px, 1fr));
+    flex-wrap: wrap;
 }

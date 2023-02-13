@@ -1,9 +1,9 @@
 <template>
   <header>
-    <h1>Bitcoin</h1>
+    <h1>missBitcoin </h1>
     <nav>
       <RouterLink to="/">Home</RouterLink>
-      <RouterLink to="/bitcoin">Bitcoin</RouterLink>
+      <RouterLink to="/contact">Bitcoin</RouterLink>
       <RouterLink to="/about">About</RouterLink>
     </nav>
   </header>

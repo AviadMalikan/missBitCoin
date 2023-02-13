@@ -1,33 +1,41 @@
 <template>
-    <Transition>
-        <div v-if="msg" class="user-msg">
-            <p>{{ msg.txt }}</p>
-        </div>
-    </Transition>
+  <Transition>
+  <div v-if="msg" :class="msgStyle" class="user-msg">
+    <p>{{ msg.txt }}</p>
+  </div>
+  </Transition>
 </template>
 
 <script>
-import { eventBus } from '@/services/eventBus.service.js'
+import { eventBus } from "@/services/eventBus.service.js";
 export default {
-    data() {
-        return {
-            msg: null,
-        }
+  data() {
+    return {
+      msg: null,
+    };
+  },
+  created() {
+    this.unListen = eventBus.on("user-msg", this.showMsg);
+  },
+  unmounted() {
+    this.unListen();
+  },
+  methods: {
+    showMsg(msg) {
+      console.log(msg);
+      this.msg = msg;
+      setTimeout(() => (this.msg = null), msg.timeout || 55500);
     },
-    created() {
-        this.unListen = eventBus.on('user-msg', this.showMsg)
+  },
+  computed: {
+    msgStyle() {
+      return {
+        success: this.msg.type === "success",
+        fail: this.msg.type === "fail",
+      };
     },
-    unmounted() {
-        this.unListen()
-    },
-    methods: {
-        showMsg(msg) {
-            console.log(msg)
-            this.msg = msg
-            setTimeout(() => (this.msg = null), msg.timeout || 1500)
-        },
-    },
-}
+  },
+};
 </script>
 
 <style lang="scss"></style>
