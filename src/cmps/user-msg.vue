@@ -3,7 +3,7 @@
   <div v-if="msg" :class="msgStyle" class="user-msg">
     <p>{{ msg.txt }}</p>
   </div>
-  </Transition>
+</Transition>
 </template>
 
 <script>
@@ -24,7 +24,7 @@ export default {
     showMsg(msg) {
       console.log(msg);
       this.msg = msg;
-      setTimeout(() => (this.msg = null), msg.timeout || 55500);
+      setTimeout(() => (this.msg = null), msg.timeout || 2500);
     },
   },
   computed: {
